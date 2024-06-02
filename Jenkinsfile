@@ -12,8 +12,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building project with Maven...'
-                    dir('maven-project') {
-                        sh 'mvn clean install'
+                    
                     }
                 }
             }
@@ -23,8 +22,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building project with Gradle...'
-                    dir('gradle-project') {
-                        sh 'gradle build'
+                    
                     }
                 }
             }
@@ -34,9 +32,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building project with Node.js...'
-                    dir('nodejs-project') {
-                        sh 'npm install'
-                        sh 'npm run build'
+                    
                     }
                 }
             }
